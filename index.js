@@ -19,9 +19,18 @@ function randomIndex() {
     return Math.round(Math.random() * (charLength - 0) + 0)
 }
 function getPassword() {
-    password1.innerText = generatePassword()
-    password2.innerText = generatePassword()
+    password1.value = generatePassword()
+    password2.value = generatePassword()
 }
+
+function copy(field) {
+    var copyText = document.getElementById(field);
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+    navigator.clipboard.writeText(copyText.value);
+    document.getElementById("copy-alert").style.color = "#55F991";
+    
+  }
 
 
 

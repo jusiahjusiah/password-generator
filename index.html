@@ -20,12 +20,15 @@
             <button id="generatePassword" class="generate" onclick="getPassword()">Generate Passwords </button>
             <div class="password-input">
                 <div class="password-item">
-                    <p id="password-1"></p>
+                    <input type="text" id="password-1" onclick="copy('password-1')"></p>
                 </div>
                 <div class="password-item">
-                    <p id="password-2"></p>
+                    <input type="text" id="password-2" onclick="copy('password-2')"></p>
                 </div>
-            </div>                       
+            </div>    
+            <div>
+                <p id="copy-alert"> Copied to clipboard! </p>
+            </div>                   
         </div>
     </div>
     <script src="index.js"></script>
